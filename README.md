@@ -2,7 +2,10 @@
 
 ## Prep
 
-Download dispatcher.so to install/... and update Dockerfile with the right filename.
+Go to 
+https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/release-notes.html?lang=en#apache
+and download dispatcher.so to install/... 
+Update Dockerfile with the right filename.
 
 ## Conf
 
