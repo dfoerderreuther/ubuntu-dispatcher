@@ -1,1 +1,1 @@
-docker exec -it df_apache_dispatcher /bin/bash
+docker exec -it ubuntu_dispatcher /bin/bash

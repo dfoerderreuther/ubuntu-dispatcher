@@ -1,1 +1,1 @@
-docker stop df_apache_dispatcher
+docker stop ubuntu_dispatcher
