@@ -1,4 +1,4 @@
-# Minimalistic AEM Dispatcher based on UBUNTU and Docker
+# Minimalistic AEM Dispatcher based on Ubuntu and Docker
 
 ## Prep
 
