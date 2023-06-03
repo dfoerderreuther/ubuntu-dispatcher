@@ -1,0 +1,1 @@
+docker stop df_apache_dispatcher
