@@ -18,6 +18,10 @@ RUN echo "alias l='ls -l'" >> ~/.bashrc
 RUN echo "alias tf='tail -f'" >> ~/.bashrc
 RUN echo "alias ll='ls -alF'" >> ~/.bashrc
 
+#RUN ln -sf /proc/self/fd/1 /var/log/apache2/access.log && \
+#    ln -sf /proc/self/fd/1 /var/log/apache2/error.log
+
 EXPOSE 80
 CMD ["apache2ctl", "-D", "FOREGROUND"]
+
 

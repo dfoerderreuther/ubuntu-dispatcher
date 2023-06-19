@@ -87,6 +87,7 @@
 #     /0026 { /type "allow" /url "/home/*"   }
 #     /0027 { /type "allow" /url "/tmp/*"    }
 #     /0028 { /type "allow" /url "/var/*"    }
+      /0031 { /type "allow" /url "/graphql/*" } 
   
   # We.Retail Alert: Allows We.Retail clientlibs to pass through
   /0030 { /type "allow" /url "/etc.clientlibs/*" }
@@ -147,12 +148,12 @@
       # page is received, only files within the same subtree are affected 
       # by the invalidation.
       # We.Retail Alert: Language node is is at a depth of 3
-      /statfileslevel "7"
+		  /statfileslevel "2"
       
       # Flag indicating whether to cache responses to requests that contain
       # authorization information.
       # We.Retail Alert
-      /allowAuthorized "1"
+      /allowAuthorized "0"
       
       # Flag indicating whether the dispatcher should serve stale content if
       # no remote server is available.
@@ -198,37 +199,33 @@
             /glob "*.js"
             /type "allow"
           }
-        /0004
+        /0002
           {
-            /glob "/content/we-retail/us/en/about-us.html"
+            # Consider all HTML files stale after an activation.
+            /glob "*.html"
             /type "allow"
           }
-        #/0001
-        #  {
-        #  # Consider all HTML files stale after an activation.
-        #  /glob "*.html"
-        #  /type "allow"
-        #  }
-        /0002
+        /0004
           {
           /glob "/etc/segmentation.segment.js"
           /type "allow"
           }
-        /0003
+        /0005
           {
           /glob "*/analytics.sitecatalyst.js"
           /type "allow"
           }
-        /0005
-          {
-            #/glob "/content/amadeus-cat/??/??/[a-z].html"
-            /glob "/content/amadeus-cat/us/en/articles.html"
-            /type "allow"
-          }
+        #/0007
+        #  {
+        #    /glob "/content/demo-site/*/*/always-invalidate.html"
+        #    /type "allow"
+        #  }
         
         }
+
+
       
-      /invalidateHandler "/usr/local/apache2/conf/invalidate.sh"
+      #/invalidateHandler "/usr/local/apache2/conf/invalidate.sh"
 
 
 

@@ -1,0 +1,1 @@
+docker exec ubuntu_dispatcher find /var/www/cache -name .stat  -printf "%-25p \t %t\n"
